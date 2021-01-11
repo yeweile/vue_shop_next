@@ -8,6 +8,8 @@ import './assets/css/gloabl.css'
 import './assets/fonts/iconfont.css'
 // 对axios进行全局配置
 import axios from 'axios'
+// 引入vue-table-with-tree-grid插件（树型表格）
+import TreeTable from 'vue-table-with-tree-grid'
 
 // 为axios设置根路径
 axios.defaults.baseURL='http://127.0.0.1:8888/api/private/v1/'
@@ -26,6 +28,8 @@ Vue.prototype.$http = axios
 
 
 Vue.config.productionTip = false
+// 全局加载vue-table-with-tree-grid插件（树型表格）
+Vue.component('tree-table',TreeTable)
 
 new Vue({
   router,
